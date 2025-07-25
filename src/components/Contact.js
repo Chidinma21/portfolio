@@ -74,8 +74,8 @@ const handleSubmit = (e) => {
     .catch((error) => alert(error));
 };
 
-const [formValues, ] = useState({ name: "", email: "", message: "" });
-const isFormEmpty = !formValues.name || !formValues.email || !formValues.message;
+// const [formValues, ] = useState({ name: "", email: "", message: "" });
+// const isFormEmpty = !formValues.name || !formValues.email || !formValues.message;
 
 const Contact = () => {
   const classes = useStyles();
@@ -135,7 +135,7 @@ const Contact = () => {
             fullWidth
             endIcon={<Send />}
             className={classes.button}
-            disabled={isFormEmpty}
+            // disabled={isFormEmpty}
           >
             Contact Me
           </Button>
