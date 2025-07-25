@@ -74,7 +74,7 @@ const handleSubmit = (e) => {
     .catch((error) => alert(error));
 };
 
-const [formValues, _] = useState({ name: "", email: "", message: "" });
+const [formValues, ] = useState({ name: "", email: "", message: "" });
 const isFormEmpty = !formValues.name || !formValues.email || !formValues.message;
 
 const Contact = () => {
