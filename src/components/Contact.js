@@ -61,6 +61,19 @@ const InputField = withStyles({
   },
 })(TextField);
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const form = e.target;
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString(),
+  })
+    .then(() => window.location.reload())  // ✅ Reload page after successful submission
+    .catch((error) => alert(error));
+};
+
 const Contact = () => {
   const classes = useStyles();
 
@@ -73,6 +86,7 @@ const Contact = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
           className={classes.form}
         >
           <input type="hidden" name="form-name" value="contact" />
