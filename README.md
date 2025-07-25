@@ -57,7 +57,7 @@ Server will be available at http://127.0.0.1:3000 in your browser
 ## Author
 
 <blockquote>
-Mahmudul alam
+Chidinma Onuora
 Email: expelmahmud@gmail.com
 </blockquote>
 

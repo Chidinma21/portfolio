@@ -69,13 +69,13 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLineYear: {
     textAlign: "center",
-    maxWidth: "9.375rem",
+    maxWidth: "17.375rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.8rem",
     color: "#fff",
     background: "tomato",
     lineHeight: 1,
-    padding: "0.5rem 1rem",
+    padding: "0.5rem 0.3rem",
     "&:before": {
       display: "none",
     },
@@ -121,7 +121,7 @@ const Resume = () => {
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2013
+          Apr 2023 - Present
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -129,27 +129,24 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            web design
+            Software Engineer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+            Partna
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Built and maintained core backend services, including a real-time analytics dashboard and secure fiat transaction APIs using Go and Node.js. Led test automation efforts and improved overall system reliability.
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2014
+          Jul 2024 - Feb 2025
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -157,27 +154,48 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            html & css
+            Software Engineer - Contract
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+            Atlaxchange
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Contributed to user onboarding flows, including KYC and KYB implementation. Integrated APIs for crypto and fiat deposits using Go and PostgreSQL.          </Typography>
+        </Box>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          Sep 2022 - Mar 2023
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+            Software Engineering Intern
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Partna
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            className={classes.subtitle1}
+          >
+            Improved system stability through bug fixes, test automation, and backend refactoring. Led development of a USD card-issuing service using Node.js and MongoDB, and created internal API documentation to support team integration.
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2015
+          Jan 2022 - Jun 2022
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -185,48 +203,17 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            Fullstack Javascript
+            Full-Stack Developer Intern
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+            GoMyCode
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2017
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Django & React
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Built and optimized web applications using React, Node.js, PostgreSQL, and MongoDB. Designed RESTful APIs and set up CI/CD pipelines to streamline development and deployment.
           </Typography>
         </Box>
       </Box>
