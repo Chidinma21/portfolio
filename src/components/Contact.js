@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -74,6 +74,9 @@ const handleSubmit = (e) => {
     .catch((error) => alert(error));
 };
 
+const [formValues, _] = useState({ name: "", email: "", message: "" });
+const isFormEmpty = !formValues.name || !formValues.email || !formValues.message;
+
 const Contact = () => {
   const classes = useStyles();
 
@@ -132,6 +135,7 @@ const Contact = () => {
             fullWidth
             endIcon={<Send />}
             className={classes.button}
+            disabled={isFormEmpty}
           >
             Contact Me
           </Button>
