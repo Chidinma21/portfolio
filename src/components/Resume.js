@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -107,11 +108,35 @@ const useStyles = makeStyles((theme) => ({
   subtitle1: {
     color: "tan",
   },
+  downloadButtonContainer: {
+    position: 'absolute',
+    top: theme.spacing(2),
+    right: theme.spacing(2),
+    zIndex: 10,
+  },
+  downloadButton: {
+    backgroundColor: 'tomato',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: 'darkred',
+    },
+  },
 }));
 
 const Resume = () => {
   const classes = useStyles();
   return (
+    <>
+    <Box className={classes.downloadButtonContainer}>
+      <Button
+        variant="contained"
+        className={classes.downloadButton}
+        href="/resume.pdf"
+        download
+      >
+        Download Resume
+      </Button>
+    </Box>
     <Box component="header" className={classes.mainContainer}>
       <Typography variant="h4" align="center" className={classes.heading}>
         Working Experience
@@ -154,7 +179,7 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            Software Engineer - Contract
+            Go Engineer - Contract
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Atlaxchange
@@ -218,6 +243,7 @@ const Resume = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };
 

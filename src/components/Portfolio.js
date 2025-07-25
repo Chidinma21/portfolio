@@ -15,40 +15,68 @@ import partna from "../images/partna.jpg";
 import atlaxchange from "../images/atlax.jpg";
 
 const useStyles = makeStyles((theme) => ({
-  // mainContainer: {
-  //   background: "#233",
-  // },
+  mainContainer: {
+    padding: theme.spacing(0.5, 2),
+  },
+  gridItem: {
+    display: 'flex',
+  },
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '85%',
   },
+  actionArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    justifyContent: 'space-between',
+  },
+  media: {
+    height: 140,
+  }
 }));
 
 const projects = [
   {
     name: "Coinprofile",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
+    description: (
+      <>
+        Led the design and implementation of a USD card issuing service.<br/>
+        Contributed to implementing microservice architecture to power KYC and payment workflows.<br/>
+        Integrated multiple identity‑provider APIs.<br/><br/>
+        <strong>Tech Stack:</strong> Node.js · Express · MongoDB · Docker
+      </>
+    ),    
     image: coinprofile,
     link: "https://coinprofile.com/",
   },
   {
     name: "Partna",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: (
+      <>
+        Built RESTful APIs, authorization and authentication flows to support dashboard data ingestion and secure merchant authentication.<br/>
+        Designed real‑time analytics endpoints, optimized database queries, and layered Redis caching for sub‑100ms lookups, improving response times.<br/>
+        Integrated TigerBeetle transaction database to ensure atomic, high‑throughput ledger consistency across payment flows.<br/><br/>
+        <strong>Tech Stack:</strong> Go · TigerBeetle · Postgres · Redis · Docker
+      </>
+    ),
     image: partna,
     link: "https://getpartna.com/",
   },
   {
     name: "Atlaxchange",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: (
+      <>
+        Collaborated on the development and scaling of core fiat on‑ramp/off‑ramp services handling millions in monthly volume.<br/>
+        Established uniform error‑handling patterns and CI‑driven unit tests, enhancing reliability of external integrations.<br/>
+        Integrated multiple identity‑provider APIs.<br/><br/>
+        <strong>Tech Stack:</strong> Go · PostgreSQL · Docker
+      </>
+    ), 
     image: atlaxchange,
     link: "https://www.atlaxchange.com/",
   },

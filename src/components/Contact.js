@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -33,6 +33,12 @@ const useStyles = makeStyles(() => ({
     marginTop: "1rem",
     color: "tomato",
     borderColor: "tan",
+    "&.Mui-disabled": {
+      color: "tomato",
+      borderColor: "tan", 
+      pointerEvents: "auto !important",
+      cursor: "not-allowed !important", 
+    },
   },
   field: {
     margin: "1rem 0rem",
@@ -70,15 +76,18 @@ const handleSubmit = (e) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(new FormData(form)).toString(),
   })
-    .then(() => window.location.reload())  // ✅ Reload page after successful submission
+    .then(() => window.location.href = "/")
     .catch((error) => alert(error));
 };
 
-// const [formValues, ] = useState({ name: "", email: "", message: "" });
-// const isFormEmpty = !formValues.name || !formValues.email || !formValues.message;
-
 const Contact = () => {
   const classes = useStyles();
+
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const isFormEmpty = !name || !email || !message;
 
   return (
     <Box component="div" className={classes.contactContainer}>
@@ -107,6 +116,7 @@ const Contact = () => {
             label="Name"
             variant="outlined"
             inputProps={{ className: classes.input }}
+            onChange={(e) => setName(e.target.value)}          
           />
 
           <InputField
@@ -116,6 +126,7 @@ const Contact = () => {
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
+            onChange={(e) => setEmail(e.target.value)}          
           />
 
           <InputField
@@ -127,6 +138,7 @@ const Contact = () => {
             rows={4}
             inputProps={{ className: classes.input }}
             className={classes.field}
+            onChange={(e) => setMessage(e.target.value)}          
           />
 
           <Button
@@ -135,7 +147,7 @@ const Contact = () => {
             fullWidth
             endIcon={<Send />}
             className={classes.button}
-            // disabled={isFormEmpty}
+            disabled={isFormEmpty}
           >
             Contact Me
           </Button>

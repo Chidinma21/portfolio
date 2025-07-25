@@ -15,6 +15,7 @@ import Typography from "@material-ui/core/Typography";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
+import Build from '@material-ui/icons/Build';
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
@@ -52,8 +53,9 @@ const useStyles = makeStyles((theme) => ({
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
-  { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
+  { listIcon: <Build />, listText: "Toolkit", listPath: "/tools" },
+  { listIcon: <Apps />, listText: "Showcase", listPath: "/work" },
+  { listIcon: <ContactMail />, listText: "Let's Talk", listPath: "/contact" },
 ];
 
 const Navbar = () => {
@@ -94,7 +96,7 @@ const Navbar = () => {
               <ArrowBack className={classes.arrow} />
             </IconButton>
             <Typography variant="h5" className={classes.title}>
-              Portfolio
+              Chidinma's Portfolio
             </Typography>
           </Toolbar>
         </AppBar>
