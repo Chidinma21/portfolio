@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Send from "@material-ui/icons/Send";
+import MuiAlert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles(() => ({
   contactContainer: {
@@ -61,18 +62,34 @@ const InputField = withStyles({
   },
 })(TextField);
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+const [open, setOpen] = useState(false);
+
+const handleClose = (event, reason) => {
+  if (reason === "clickaway") return;
+  setOpen(false);
+};
+
 const handleSubmit = (e) => {
   e.preventDefault();
+
   const form = e.target;
+  const data = new FormData(form);
 
   fetch("/", {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form)).toString(),
+    body: data,
   })
-    .then(() => window.location.reload())  // ✅ Reload page after successful submission
-    .catch((error) => alert(error));
+    .then(() => {
+      form.reset();
+      setOpen(true);
+    })
+    .catch((error) => alert("Error submitting form"));
 };
+
 
 const Contact = () => {
   const classes = useStyles();
